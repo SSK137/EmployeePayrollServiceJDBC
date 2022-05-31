@@ -31,18 +31,4 @@ mysql> use employee_payroll;
 Database changed
 
 ======================UC2==============================
-//Use Create Table employee_payroll Query
-  to create employee payroll table with columns id,
-  name, salary and start date as column. Note Id is set to
-  auto increment.
-//Before execute query
-mysql> show tables;
-Empty set (0.00 sec)
-//After execute query
-mysql> show tables;
-+----------------------------+
-| Tables_in_employee_payroll |
-+----------------------------+
-| employee_payroll           |
-+----------------------------+
-1 row in set (0.01 sec)
+

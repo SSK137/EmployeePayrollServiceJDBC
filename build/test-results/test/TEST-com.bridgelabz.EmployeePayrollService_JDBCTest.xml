@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.EmployeePayrollService_JDBCTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-31T18:48:02" hostname="hp-HP-ProBook-440-G5" time="0.389">
+  <properties/>
+  <testcase name="GivenSqlQuery_CreateTable_ShouldReturnTrue()" classname="com.bridgelabz.EmployeePayrollService_JDBCTest" time="0.389"/>
+  <system-out><![CDATA[DB Connected Successfully
+Table Created Successfully !!!!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
