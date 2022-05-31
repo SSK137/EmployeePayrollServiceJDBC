@@ -18,4 +18,18 @@ public class EmployeePayrollService_JDBCOperation implements Payroll_Interface{
             return false;
         }
     }
+    public boolean InsertRecordInTable() {
+
+        try(Connection conn = DB_Connection.getConnection();
+            Statement stmt = conn.createStatement();
+        ) {
+            String sql = "INSERT INTO employee_payroll VALUES(1,'SSK',45000,'2022-02-02')";
+            stmt.executeUpdate(sql);
+            System.out.println("Inserted records into the table...");
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

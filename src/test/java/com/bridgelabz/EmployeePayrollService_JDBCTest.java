@@ -9,4 +9,9 @@ public class EmployeePayrollService_JDBCTest {
         EmployeePayrollService_JDBCOperation employeePayrollService_jdbcOperation=new EmployeePayrollService_JDBCOperation();
         Assertions.assertTrue(employeePayrollService_jdbcOperation.CreateNewTable());
     }
+    @Test
+    public void GivenSqlQuery_InsertRecordProper_ShouldReturnTrue(){
+        EmployeePayrollService_JDBCOperation employeePayrollService_jdbcOperation=new EmployeePayrollService_JDBCOperation();
+        Assertions.assertTrue(employeePayrollService_jdbcOperation.InsertRecordInTable());
+    }
 }
