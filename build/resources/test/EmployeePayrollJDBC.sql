@@ -46,3 +46,23 @@ mysql> show tables;
 | employee_payroll           |
 +----------------------------+
 1 row in set (0.01 sec)
+
+======================UC3==============================
+//Use INSERT INTO employee_payroll
+  Query to create employees payroll
+  data into the employee_payroll table
+//After execute query
+mysql> select * from employee_payroll;
++------+---------+--------+------------+
+| id   | name    | salary | Start_Date |
++------+---------+--------+------------+
+|    1 | SSK     |  45000 | 2022-02-02 |
+|    2 | Saurabh |  40000 | 2022-05-12 |
+|    3 | Sneha   |  50000 | 2022-03-17 |
++------+---------+--------+------------+
+3 rows in set (0.00 sec)
+
+======================UC4==============================
+//Use SELECT * FROM employee_payroll to
+retrieve all the data from the
+employee_payroll table
