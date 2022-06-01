@@ -92,3 +92,44 @@ mysql> SELECT salary FROM employee_payroll WHERE name = 'SSK' or  Start_Date BET
 |  50000 |
 |  55000 |
 +--------+
+
+======================UC6==============================
+//Use Alter Table Command to add Field gender after
+  the name field
+  Use Update Query to set the gender using where
+  condition with the employee name
+  - E.g. UPDATE employee_payroll set gender =
+  'M' where name = 'Bill' or name =
+  'Charlie';
+mysql> ALTER TABLE employee_payroll ADD gender CHAR(1) NOT NULL AFTER name;
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc employee_payroll
+    -> ;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| id         | int         | YES  |     | NULL    |       |
+| name       | varchar(50) | YES  |     | NULL    |       |
+| gender     | char(1)     | NO   |     | NULL    |       |
+| salary     | double      | YES  |     | NULL    |       |
+| Start_Date | date        | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> UPDATE employee_payroll SET Gender='M' WHERE name='Saurabh';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from employee_payroll;
++------+---------+--------+--------+------------+
+| id   | name    | gender | salary | Start_Date |
++------+---------+--------+--------+------------+
+|    1 | SSK     |        |  45000 | 2022-02-02 |
+|    2 | Saurabh | M      |  40000 | 2022-05-12 |
+|    3 | Sneha   |        |  50000 | 2022-03-17 |
+|    4 | Adesh   |        |  55000 | 2018-01-01 |
+|    5 | Sohan   |        |  65000 | 2017-01-01 |
++------+---------+--------+--------+------------+
+5 rows in set (0.00 sec)

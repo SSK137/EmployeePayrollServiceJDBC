@@ -7,4 +7,5 @@ interface Payroll_Interface {
     boolean InsertRecordInTable();
     List<EmployeeData> ReadAllDataFromTable();
     boolean DisplayParticularData();
+    boolean UpdateRecordInTable();
 }

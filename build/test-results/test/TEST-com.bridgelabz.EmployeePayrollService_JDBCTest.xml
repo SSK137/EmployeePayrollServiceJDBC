@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollService_JDBCTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-01T03:45:26" hostname="hp-HP-ProBook-440-G5" time="0.188">
+<testsuite name="com.bridgelabz.EmployeePayrollService_JDBCTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-01T04:19:54" hostname="hp-HP-ProBook-440-G5" time="0.29">
   <properties/>
-  <testcase name="GivenSqlQuery_ParticularRecordIsProper_ShouldReturnTrue()" classname="com.bridgelabz.EmployeePayrollService_JDBCTest" time="0.188"/>
+  <testcase name="GivenSqlQuery_RecordUpdatedProper_ShouldReturnTrue()" classname="com.bridgelabz.EmployeePayrollService_JDBCTest" time="0.29"/>
   <system-out><![CDATA[DB Connected Successfully
-45000.0
-40000.0
-50000.0
-55000.0
+Record Updated Successfully...
+DB Connected Successfully
+Employee Payroll Data]      Id :1 Name :SSK Grnder : Salary : 45000.0 Salary : 2022-02-02
+Employee Payroll Data]      Id :2 Name :Saurabh Grnder :M Salary : 40000.0 Salary : 2022-05-12
+Employee Payroll Data]      Id :3 Name :Sneha Grnder : Salary : 50000.0 Salary : 2022-03-17
+Employee Payroll Data]      Id :4 Name :Adesh Grnder : Salary : 55000.0 Salary : 2018-01-01
+Employee Payroll Data]      Id :5 Name :Sohan Grnder : Salary : 65000.0 Salary : 2017-01-01
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

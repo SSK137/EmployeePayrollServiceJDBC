@@ -49,7 +49,8 @@ public class EmployeePayrollService_JDBCOperation implements Payroll_Interface{
                 String name=resultSet.getString("name");
                 double salary=resultSet.getDouble("salary");
                 String Start_Date=resultSet.getString("Start_Date");
-                employeeDataList.add(new EmployeeData(id,name,salary,Start_Date));
+                String Gender=resultSet.getString("Gender");
+                employeeDataList.add(new EmployeeData(id,name,salary,Start_Date,Gender));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -69,6 +70,25 @@ public class EmployeePayrollService_JDBCOperation implements Payroll_Interface{
             return true;
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }
+    }
+    //Update Gender column inside the table
+    public boolean UpdateRecordInTable() {
+        try(Connection conn = DB_Connection.getConnection();
+            Statement stmt = conn.createStatement();
+        ) {
+            String sql = "UPDATE employee_payroll SET Gender='M' WHERE name='Saurabh'";
+            stmt.executeUpdate(sql);
+            System.out.println("Record Updated Successfully...");
+            List<EmployeeData> employeeData=ReadAllDataFromTable();
+            for(EmployeeData data:employeeData)
+            {
+                System.out.println(data);
+            }
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

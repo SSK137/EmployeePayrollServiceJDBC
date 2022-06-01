@@ -30,4 +30,9 @@ public class EmployeePayrollService_JDBCTest {
         EmployeePayrollService_JDBCOperation employeePayrollService_jdbcOperation=new EmployeePayrollService_JDBCOperation();
         Assertions.assertTrue(employeePayrollService_jdbcOperation.DisplayParticularData());
     }
+    @Test
+    public void GivenSqlQuery_RecordUpdatedProper_ShouldReturnTrue() {
+        EmployeePayrollService_JDBCOperation employeePayrollService_jdbcOperation = new EmployeePayrollService_JDBCOperation();
+        Assertions.assertTrue(employeePayrollService_jdbcOperation.UpdateRecordInTable());
+    }
 }
