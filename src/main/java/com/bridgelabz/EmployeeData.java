@@ -25,6 +25,6 @@ public class EmployeeData {
         return Start_Date;
     }
     public String toString(){
-        return "Employee Payroll Data]      Id :"+id+" Name :"+name+" Salary : "+salary;
+        return "Employee Payroll Data]      Id :"+id+" Name :"+name+" Salary : "+salary+" Salary : "+Start_Date;
     }
 }

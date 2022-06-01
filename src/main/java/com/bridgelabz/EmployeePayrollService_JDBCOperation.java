@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeePayrollService_JDBCOperation implements Payroll_Interface{
+    //Method to Create New Table in Database
     public boolean CreateNewTable() {
         try(Connection conn = DB_Connection.getConnection();
             Statement statement = conn.createStatement();
@@ -21,12 +22,12 @@ public class EmployeePayrollService_JDBCOperation implements Payroll_Interface{
             return false;
         }
     }
+    //Method to Insert Records in Table
     public boolean InsertRecordInTable() {
-
         try(Connection conn = DB_Connection.getConnection();
             Statement stmt = conn.createStatement();
         ) {
-            String sql = "INSERT INTO employee_payroll VALUES(3,'Sneha',50000,'2022-03-17')";
+            String sql = "INSERT INTO employee_payroll VALUES(5,'Sohan',65000,'2017-01-01')";
             stmt.executeUpdate(sql);
             System.out.println("Inserted records into the table...");
             return true;
@@ -35,6 +36,7 @@ public class EmployeePayrollService_JDBCOperation implements Payroll_Interface{
             return false;
         }
     }
+    //Retrive all the data from Table
     public List<EmployeeData> ReadAllDataFromTable(){
         String sql="SELECT * FROM employee_payroll";
         List<EmployeeData> employeeDataList=new ArrayList<>();
@@ -53,5 +55,20 @@ public class EmployeePayrollService_JDBCOperation implements Payroll_Interface{
             throw new RuntimeException(e);
         }
         return employeeDataList;
+    }
+    //Display Particular record from Table
+    public boolean DisplayParticularData(){
+        String sql="SELECT salary FROM employee_payroll WHERE name = 'SSK' or  Start_Date BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());";
+        try{
+            Connection connection=DB_Connection.getConnection();
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery(sql);
+            while (resultSet.next()){
+                System.out.println(resultSet.getString("salary"));
+            }
+            return true;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

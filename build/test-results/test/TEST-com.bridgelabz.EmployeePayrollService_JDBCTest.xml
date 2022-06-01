@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollService_JDBCTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-01T03:21:22" hostname="hp-HP-ProBook-440-G5" time="0.191">
+<testsuite name="com.bridgelabz.EmployeePayrollService_JDBCTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-01T03:45:26" hostname="hp-HP-ProBook-440-G5" time="0.188">
   <properties/>
-  <testcase name="GivenSqlQuery_ShowDataFromTable_ShouldReturnTrue()" classname="com.bridgelabz.EmployeePayrollService_JDBCTest" time="0.191"/>
+  <testcase name="GivenSqlQuery_ParticularRecordIsProper_ShouldReturnTrue()" classname="com.bridgelabz.EmployeePayrollService_JDBCTest" time="0.188"/>
   <system-out><![CDATA[DB Connected Successfully
-Employee Payroll Data]      Id :1 Name :SSK Salary : 45000.0
-Employee Payroll Data]      Id :2 Name :Saurabh Salary : 40000.0
-Employee Payroll Data]      Id :3 Name :Sneha Salary : 50000.0
+45000.0
+40000.0
+50000.0
+55000.0
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

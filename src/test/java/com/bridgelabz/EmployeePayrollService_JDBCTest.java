@@ -17,12 +17,17 @@ public class EmployeePayrollService_JDBCTest {
         Assertions.assertTrue(employeePayrollService_jdbcOperation.InsertRecordInTable());
     }
     @Test
-    public void GivenSqlQuery_ShowDataFromTable_ShouldReturnTrue() {
+    public void GivenSqlQuery_RetriveAllDataFromTable_ShouldReturnTrue() {
         EmployeePayrollService_JDBCOperation employeePayrollService = new EmployeePayrollService_JDBCOperation();
         List<EmployeeData> employeeData = employeePayrollService.ReadAllDataFromTable();
         for (EmployeeData employeeData1 : employeeData) {
             System.out.println(employeeData1);
         }
-        Assertions.assertEquals(3, employeeData.size());
+        Assertions.assertEquals(5, employeeData.size());
+    }
+    @Test
+    public void GivenSqlQuery_ParticularRecordIsProper_ShouldReturnTrue(){
+        EmployeePayrollService_JDBCOperation employeePayrollService_jdbcOperation=new EmployeePayrollService_JDBCOperation();
+        Assertions.assertTrue(employeePayrollService_jdbcOperation.DisplayParticularData());
     }
 }
